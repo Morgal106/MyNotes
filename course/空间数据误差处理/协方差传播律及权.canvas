@@ -1,0 +1,39 @@
+{
+	"nodes":[
+		{"id":"37e4327e078ac0c9","x":-1459,"y":-1120,"width":1452,"height":1240,"color":"5","type":"group","label":"协方差传播律及权"},
+		{"id":"d0de74b0570ef7cd","x":-1357,"y":-731,"width":425,"height":463,"type":"text","text":"### 多个观测值的方差-协方差阵\n\n多个观测值线性函数：\n$$\n\\underset{t,1}{Z}=\\underset{t,n}{K}\\cdot\\underset{n,1}{X}+\\underset{t,1}{K_0}\n$$\n\n其中 $\\underset{t,1}{Z}$ 是函数，$\\underset{t,n}{K}$ 是系数矩阵，$\\underset{n,1}{X}$ 是观测值，$\\underset{t,1}{K_0}$ 是常数矩阵。\n\n"},
+		{"id":"489a73234c19cfb5","x":-1276,"y":-1081,"width":250,"height":127,"type":"text","text":"- 直接观测量\n- 非直接观测量\n    - 观测值的函数"},
+		{"id":"a97d4dfc091f996d","x":-1276,"y":-917,"width":250,"height":121,"type":"text","text":"- 独立观测值\n- 非独立观测值\n    - 相关观测值"},
+		{"id":"8e46b2f8d59ecb4e","x":-804,"y":-731,"width":355,"height":359,"type":"text","text":"### 观测值线性函数 \n\n\n函数：$$x=KL+K_0$$  \n\n其中 $K$ 代表**系数矩阵**， $L$ 代表**观测值矩阵**，$K_0$ 代表常数项。\n\n函数的期望：$$E(x)=KE(L)+K_0$$\n\n函数的方差：$$D(x)=E\\{[x-E(x)][x-E(x)] ^T\\}=KD_LK^T$$\n\n"},
+		{"id":"cf7ccaeac6dc1c91","x":-1186,"y":-2081,"width":906,"height":739,"color":"6","type":"group","label":"绪论"},
+		{"id":"46b6a59fa501bc67","x":-1153,"y":-1711,"width":442,"height":357,"type":"text","text":"### 误差来源\n\n- 测量仪器\n- 观测者\n- 外界环境\n\n### 误差分类\n\n- 偶然误差：在符号和大小上表现出偶然性\n- 系统误差：在符号和大小上表现出系统性，或者按一定规律变化\n- 粗差：即错误"},
+		{"id":"27d198cfe6dd3189","x":-656,"y":-2056,"width":341,"height":475,"type":"text","text":"## 基本概念\n\n### 误差\n\n对未知量的测量称为观测，测量所得结果称为观测值。观测值与**其真值之间的差异**称为测量误差或观测误差，通常称为真误差，简称误差\n\n### 测量平差\n\n测量平差是*测量数据调整*的意思。其定义是，依据某种**最优化原则**，由一系列带有**观测误差**的测量数据，求定未知量的**最佳估值及精度**的理论和方法"},
+		{"id":"2be4c180817d5977","x":-1151,"y":-2056,"width":368,"height":313,"type":"text","text":"## 任务和意义\n\n### 任务\n\n- 消除不符值，寻求未知参数的最佳估值\n- 评定结果的精度\n\n### 意义\n\n所有的观测数据只有经过平差才能使用，平差是测量科学的基础和灵魂"},
+		{"id":"a4dee85e69a7d3f5","x":28,"y":-2081,"width":1132,"height":848,"color":"4","type":"group","label":"误差分布与精度指标"},
+		{"id":"41afd9a0d488f0e3","x":72,"y":-2000,"width":444,"height":299,"type":"text","text":"## 偶然误差的规律性\n\n1. **有界性**：在一定的观测条件下，偶然误差的绝对值有一定的限值，即超过一定限值的偶然误差出现概率为0\n2. **聚中性**：绝对值较小的偶然误差比绝对值大的偶然误差出现的概率大\n3. **对称性**：绝对值相等的正负偶然误差出现的概率相同\n4. **抵偿性**：偶然误差的理论平均值为0"},
+		{"id":"69e82b6a69396c98","x":72,"y":-1668,"width":444,"height":348,"type":"text","text":"## 精度指标\n\n1. **精度**：误差分布的密集货离散程度，用方差协方差阵描述\n2. **准确度**：描述系统误差和粗差，观测值的真值和数学期望的差\n3. **精确度**：精度与准确度的合成，用观测值的均方误差描述\n\n> 当观测值中不存在系统误差和粗差时，即观测值的数学期望等于真值时，精确度等于精度"},
+		{"id":"836fc62b476a9afd","x":294,"y":-640,"width":325,"height":88,"color":"2","type":"text","text":"# **空间数据误差处理**"},
+		{"id":"585c165d8ba461b9","x":624,"y":-1657,"width":496,"height":297,"type":"text","text":"1. **方差和中误差**：方差即一组独立观测值真误差平方和除以观测数的结果，中误差即方差的平方根\n2. **平均误差**：真误差绝对值的数学期望数学期望，约等于五分之四中误差\n3. **或然误差**：误差大于或小于或然误差的概率相等，约等于三分之二中误差\n4. **极限误差**：三倍中误差\n5. **相对误差**：中误差与观测值之比，通常用分子为一的分数表示（取有效数字时，必须舍去尾数）\n"},
+		{"id":"d442e8c590c88fb3","x":620,"y":-2020,"width":447,"height":326,"color":"6","type":"group","label":"正态分布"},
+		{"id":"965dc489c88d0041","x":640,"y":-2000,"width":318,"height":116,"type":"text","text":"$$f(\\Delta)=\\frac{1}{\\sigma \\sqrt{2\\pi}}exp(-\\frac{(\\Delta-\\mu)^2}{2\\sigma^2})$$"},
+		{"id":"3e30b2d2adf87000","x":640,"y":-1864,"width":250,"height":50,"type":"text","text":"**$\\mu$** 和 *$\\sigma$* 分别为**数学期望**和*方差*"},
+		{"id":"7e1f105c8542878b","x":640,"y":-1784,"width":250,"height":60,"type":"text","text":"方差的几何意义是正态分布曲线的拐点"},
+		{"id":"63926e049bde9c14","x":966,"y":-404,"width":177,"height":60,"color":"6","type":"text","text":"# 间接平差"},
+		{"id":"d6c54496fd2e88b5","x":1201,"y":-93,"width":188,"height":60,"color":"6","type":"text","text":"# 条件平差"},
+		{"id":"eb726f7cf6760cfd","x":1201,"y":66,"width":323,"height":60,"color":"6","type":"text","text":"# *附有参数的条件平差*"},
+		{"id":"2fb2e7649308f21c","x":1363,"y":-285,"width":398,"height":57,"color":"6","type":"text","text":"# *附有限制条件的间接平差*"}
+	],
+	"edges":[
+		{"id":"17d88dd6641ad87a","fromNode":"836fc62b476a9afd","fromSide":"right","toNode":"d6c54496fd2e88b5","toSide":"left"},
+		{"id":"ded663b31b6f487b","fromNode":"d6c54496fd2e88b5","fromSide":"bottom","toNode":"eb726f7cf6760cfd","toSide":"top"},
+		{"id":"3fa8203cc15f6719","fromNode":"836fc62b476a9afd","fromSide":"right","toNode":"63926e049bde9c14","toSide":"bottom"},
+		{"id":"beb8a9e2a0a13513","fromNode":"63926e049bde9c14","fromSide":"right","toNode":"2fb2e7649308f21c","toSide":"left"},
+		{"id":"60a7529fea75e7ae","fromNode":"836fc62b476a9afd","fromSide":"top","toNode":"cf7ccaeac6dc1c91","toSide":"right"},
+		{"id":"ee9eb2d55f49ffe9","fromNode":"489a73234c19cfb5","fromSide":"right","toNode":"a97d4dfc091f996d","toSide":"right"},
+		{"id":"590452a2793c3cf0","fromNode":"a97d4dfc091f996d","fromSide":"left","toNode":"489a73234c19cfb5","toSide":"left"},
+		{"id":"5f5462dd9ad6d491","fromNode":"836fc62b476a9afd","fromSide":"top","toNode":"a4dee85e69a7d3f5","toSide":"bottom"},
+		{"id":"cd27487ed92084e5","fromNode":"d442e8c590c88fb3","fromSide":"left","toNode":"41afd9a0d488f0e3","toSide":"right","label":"决定"},
+		{"id":"50a0f04eb9f17340","fromNode":"8e46b2f8d59ecb4e","fromSide":"left","toNode":"d0de74b0570ef7cd","toSide":"right","color":"6"},
+		{"id":"be141dd823902c9d","fromNode":"836fc62b476a9afd","fromSide":"left","toNode":"37e4327e078ac0c9","toSide":"right"}
+	]
+}
